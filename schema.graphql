@@ -1,0 +1,7 @@
+type Factory_PairCreated {
+  id: ID!,
+  token0: Bytes!,
+  token1: Bytes!,
+  pair: Bytes!,
+}
+

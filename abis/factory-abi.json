@@ -1,0 +1,770 @@
+{
+  "programType": "contract",
+  "specVersion": "1",
+  "encodingVersion": "1",
+  "concreteTypes": [
+    {
+      "type": "()",
+      "concreteTypeId": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d"
+    },
+    {
+      "type": "(struct std::asset_id::AssetId, struct std::asset_id::AssetId)",
+      "concreteTypeId": "d3ddf84f691d572b4313a7be3ae1d8b67fe9061c281ff6ae955e4c4441524f92",
+      "metadataTypeId": 0
+    },
+    {
+      "type": "bool",
+      "concreteTypeId": "b760f44fa5965c2474a3b471467a22c43185152129295af588b022ae50b50903"
+    },
+    {
+      "type": "enum errors::FactoryErr",
+      "concreteTypeId": "771ee95f3a13b535e420caf7937a3fec688089b373caf2b95b2cbf058076c844",
+      "metadataTypeId": 2
+    },
+    {
+      "type": "struct events::PairCreated",
+      "concreteTypeId": "7a90a82fe624b641b6d259150b71f580c4c8bfb268af40d3625e12dc4d678a4a",
+      "metadataTypeId": 3
+    },
+    {
+      "type": "struct std::address::Address",
+      "concreteTypeId": "f597b637c3b0f588fb8d7086c6f4735caa3122b85f0423b82e489f9bb58e2308",
+      "metadataTypeId": 4
+    },
+    {
+      "type": "struct std::asset_id::AssetId",
+      "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974",
+      "metadataTypeId": 5
+    },
+    {
+      "type": "struct std::contract_id::ContractId",
+      "concreteTypeId": "29c10735d33b5159f0c71ee1dbd17b36a3e69e41f00fab0d42e1bd9f428d8a54",
+      "metadataTypeId": 6
+    },
+    {
+      "type": "u64",
+      "concreteTypeId": "1506e6f44c1d6291cdf46395a8e573276a4fa79e8ace3fc891e092ef32d1b0a0"
+    }
+  ],
+  "metadataTypes": [
+    {
+      "type": "(_, _)",
+      "metadataTypeId": 0,
+      "components": [
+        {
+          "name": "__tuple_element",
+          "typeId": 5
+        },
+        {
+          "name": "__tuple_element",
+          "typeId": 5
+        }
+      ]
+    },
+    {
+      "type": "b256",
+      "metadataTypeId": 1
+    },
+    {
+      "type": "enum errors::FactoryErr",
+      "metadataTypeId": 2,
+      "components": [
+        {
+          "name": "Initialized",
+          "typeId": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d"
+        },
+        {
+          "name": "IdenticalAddresses",
+          "typeId": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d"
+        },
+        {
+          "name": "PairExists",
+          "typeId": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d"
+        },
+        {
+          "name": "Forbidden",
+          "typeId": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d"
+        },
+        {
+          "name": "ZeroAddress",
+          "typeId": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d"
+        }
+      ]
+    },
+    {
+      "type": "struct events::PairCreated",
+      "metadataTypeId": 3,
+      "components": [
+        {
+          "name": "token0",
+          "typeId": 5
+        },
+        {
+          "name": "token1",
+          "typeId": 5
+        },
+        {
+          "name": "pair",
+          "typeId": 5
+        },
+        {
+          "name": "length",
+          "typeId": "1506e6f44c1d6291cdf46395a8e573276a4fa79e8ace3fc891e092ef32d1b0a0"
+        }
+      ]
+    },
+    {
+      "type": "struct std::address::Address",
+      "metadataTypeId": 4,
+      "components": [
+        {
+          "name": "bits",
+          "typeId": 1
+        }
+      ]
+    },
+    {
+      "type": "struct std::asset_id::AssetId",
+      "metadataTypeId": 5,
+      "components": [
+        {
+          "name": "bits",
+          "typeId": 1
+        }
+      ]
+    },
+    {
+      "type": "struct std::contract_id::ContractId",
+      "metadataTypeId": 6,
+      "components": [
+        {
+          "name": "bits",
+          "typeId": 1
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [],
+      "name": "all_pairs_length",
+      "output": "1506e6f44c1d6291cdf46395a8e573276a4fa79e8ace3fc891e092ef32d1b0a0",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Get the number of all trading pairs"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns the total number of trading pairs created in the contract."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - The total number of trading pairs"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "pair",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        },
+        {
+          "name": "asset0",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        },
+        {
+          "name": "asset1",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        }
+      ],
+      "name": "check_asset_registry",
+      "output": "b760f44fa5965c2474a3b471467a22c43185152129295af588b022ae50b50903",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Checks the asset registry to verify whether the specified `pair` is a legitimate asset pair "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " and matches the given combination of `asset0` and `asset1`. "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " The function sorts the assets, generates a hash `salt`, and verifies if the `pair` is registered."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Additionally, it checks the validity of the `ContractId` and `sub_id` to prevent attacks using forged `AssetId`."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            ""
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Parameters:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `pair`: The `AssetId` of the asset pair to be validated."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `asset0`: The `AssetId` of the first asset in the pair."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `asset1`: The `AssetId` of the second asset in the pair."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            ""
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns `true` if the asset pair is valid, registered, and the `ContractId` and `sub_id` match the `pair`."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns `false` if the validation fails, the asset pair is not registered, or the `ContractId` and `sub_id` do not match."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            ""
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Errors:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Throws `FactoryErr::IdenticalAddresses` if `asset0` and `asset1` are the same."
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "fee_to",
+          "concreteTypeId": "f597b637c3b0f588fb8d7086c6f4735caa3122b85f0423b82e489f9bb58e2308"
+        },
+        {
+          "name": "pool",
+          "concreteTypeId": "29c10735d33b5159f0c71ee1dbd17b36a3e69e41f00fab0d42e1bd9f428d8a54"
+        }
+      ],
+      "name": "constructor",
+      "output": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Contract constructor"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Initializes the contract by setting the fee receiver address, pool contract ID, and owner address. Ensures the contract is initialized only once."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Parameters:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `fee_to`: Address to receive trading fees"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `pool`: ContractId of the pool contract"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "asset0",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        },
+        {
+          "name": "asset1",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        }
+      ],
+      "name": "create_pair",
+      "output": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Create a new trading pair"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Creates a new trading pair for the given `asset0` and `asset1`, registers it, and returns its `AssetId`."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Parameters:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `asset0`: AssetId of the first asset"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `asset1`: AssetId of the second asset"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - The `AssetId` of the newly created trading pair"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [],
+      "name": "fee_to",
+      "output": "f597b637c3b0f588fb8d7086c6f4735caa3122b85f0423b82e489f9bb58e2308",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Get the address receiving trading fees"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns the current address set to receive trading fees in the contract."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - The current fee receiver address"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [],
+      "name": "fee_to_setter",
+      "output": "f597b637c3b0f588fb8d7086c6f4735caa3122b85f0423b82e489f9bb58e2308",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Get the owner address"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns the current owner of the contract (i.e., the address allowed to set the fee receiver)."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - The current owner address"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "pair",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        }
+      ],
+      "name": "get_assets",
+      "output": "d3ddf84f691d572b4313a7be3ae1d8b67fe9061c281ff6ae955e4c4441524f92",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Retrieve the asset pair corresponding to a trading pair"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns the asset pair (i.e., `asset0` and `asset1`) corresponding to the given `AssetId` of the trading pair."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Parameters:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `pair`: AssetId of the trading pair"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - A tuple containing `asset0` and `asset1`, or zeros if not found"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "asset0",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        },
+        {
+          "name": "asset1",
+          "concreteTypeId": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974"
+        }
+      ],
+      "name": "get_pair",
+      "output": "c0710b6731b1dd59799cf6bef33eee3b3b04a2e40e80a0724090215bbf2ca974",
+      "attributes": [
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Retrieve the pair's AssetId for a given asset pair"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns the `AssetId` of the trading pair corresponding to the provided `asset0` and `asset1`."
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Parameters:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `asset0`: AssetId of the first asset"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - `asset1`: AssetId of the second asset"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " "
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " Returns:"
+          ]
+        },
+        {
+          "name": "doc-comment",
+          "arguments": [
+            " - The `AssetId` of the pair, or zero if not found"
+          ]
+        },
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "new_fee_to",
+          "concreteTypeId": "f597b637c3b0f588fb8d7086c6f4735caa3122b85f0423b82e489f9bb58e2308"
+        }
+      ],
+      "name": "set_fee_to",
+      "output": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "new_fee_to_setter",
+          "concreteTypeId": "f597b637c3b0f588fb8d7086c6f4735caa3122b85f0423b82e489f9bb58e2308"
+        }
+      ],
+      "name": "set_fee_to_setter",
+      "output": "2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d",
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    }
+  ],
+  "loggedTypes": [
+    {
+      "logId": "8583554535020279093",
+      "concreteTypeId": "771ee95f3a13b535e420caf7937a3fec688089b373caf2b95b2cbf058076c844"
+    },
+    {
+      "logId": "8831743792951637569",
+      "concreteTypeId": "7a90a82fe624b641b6d259150b71f580c4c8bfb268af40d3625e12dc4d678a4a"
+    }
+  ],
+  "messagesTypes": [],
+  "configurables": []
+}

@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=./node_modules/envio/fuel.schema.json
+name: oxi-factory-indexer
+ecosystem: fuel
+networks:
+- id: 9889
+  start_block: 0
+  contracts:
+  - name: factory
+    address:
+    - 0x78c2b1350121ec32743b325daca1a050d69d996dd445eaa467b88e18a0d09c1f
+    abi_file_path: abis/factory-abi.json
+    handler: src/EventHandlers.ts
+    events:
+    - name: PairCreated
+      logId: '8831743792951637569'
